@@ -1,6 +1,5 @@
-//Traigo los elementos que debo utilizar
 const inputNum = document.querySelector(".inputSearch");
-console.dir(inputNum);
+
 const inputBTN = document.querySelector(".inputBtn");
 const menu = document.querySelector(".btn__container");
 const item = document.querySelectorAll(".item");
@@ -67,14 +66,11 @@ let pizzas = [
     img: "./imagenes/fugazeta.jpg",
   },
 ];
-//Mostrar/ocultar menu
-//Agrego un listener al menu hamburguesa con una funcion que cambia el display
+
 menu.addEventListener("click", () => {
   item.forEach((i) => i.classList.toggle("show"));
 });
-//Array de objetos, que contiene la informacion de las pizzas
 
-//Agrego un event listener al boton del input para filtrar que pizza busca
 inputBTN.addEventListener("click", buscarPizza);
 
 function buscarPizza(e) {
