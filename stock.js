@@ -1,0 +1,61 @@
+let pizzas = [
+  {
+    id: 1,
+    nombre: "Napo",
+    ingrdientes: [
+      "salsa de tomate",
+      "muzzarella",
+      "tomate",
+      "ajo",
+      "aceitunas verdes",
+    ],
+    precio: 1200,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+  {
+    id: 2,
+    nombre: "Polemica",
+    ingrdientes: ["salsa de tomate", "muzzarella", "anana", "aceitunas negras"],
+    precio: 1300,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+  {
+    id: 3,
+    nombre: "Muzza",
+    ingrdientes: ["salsa de tomate", "muzzarella", "aceitunas verdes"],
+    precio: 500,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+  {
+    id: 4,
+    nombre: "Morrones",
+    ingrdientes: ["salsa de tomate", "muzzarella", "morrones", "ajo"],
+    precio: 1200,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+  {
+    id: 5,
+    nombre: "Cuatro quesos",
+    ingrdientes: [
+      "salsa de tomate",
+      "muzzarella",
+      "provolone",
+      "parmesano",
+      "fontina",
+    ],
+    precio: 1400,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+  {
+    id: 6,
+    nombre: "Fugazzeta",
+    ingrdientes: [
+      "salsa de tomate",
+      "muzzarella",
+      "cebolla",
+      "aceitunas verdes",
+    ],
+    precio: 1200,
+    img: "./imagenes/pizzaCatalogo.jpg",
+  },
+];
