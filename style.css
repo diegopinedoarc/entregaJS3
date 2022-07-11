@@ -53,6 +53,11 @@ body {
     border-radius: 0.8rem;
     width: 100%;
     justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .linkNav {
+    text-decoration: none;
   }
 
   .btn__container {
@@ -144,12 +149,52 @@ body {
     border-radius: 0.8rem;
     gap: 1rem;
   }
+  .btnCatalogo {
+    width: 5rem;
+    height: 2rem;
+    background: var(--azul);
+    color: aliceblue;
+    font-family: "Finlandica", sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
   .imgCatalogo {
     width: 12rem;
     border-radius: 0.8rem;
   }
   .footer {
     margin-top: 2rem;
+  }
+  .cartList2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: auto;
+    background: var(--azul);
+    border-radius: 0.8rem;
+    color: var(--blanco);
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .cartList2 h3 {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  .borrar {
+    background: var(--celeste);
+    color: var(--azul);
+    width: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    position: relative;
+    top: -7.5rem;
+    left: 7rem;
   }
 }
 
@@ -204,6 +249,11 @@ body {
   }
   .show {
     display: flex;
+  }
+  .linkNav {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.2rem;
   }
   /* Diseño main page */
   .main {
@@ -261,6 +311,7 @@ body {
     height: 2rem;
     border: none;
     border-radius: 0.8rem;
+    cursor: pointer;
   }
   /* Diseño catalogo pizzas */
   .catalogo {
@@ -328,16 +379,16 @@ body {
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
+    cursor: pointer;
   }
-}
-
-.borrar {
-  background: var(--celeste);
-  color: var(--azul);
-  width: 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.8rem;
-  position: relative;
-  top: -7.5rem;
-  left: 14rem;
+  .borrar {
+    background: var(--celeste);
+    color: var(--azul);
+    width: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    position: relative;
+    top: -7.5rem;
+    left: 14rem;
+  }
 }
