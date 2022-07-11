@@ -330,3 +330,14 @@ body {
     margin-top: 5px;
   }
 }
+
+.borrar {
+  background: var(--celeste);
+  color: var(--azul);
+  width: 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  position: relative;
+  top: -7.5rem;
+  left: 14rem;
+}

@@ -102,13 +102,21 @@ function createHTML() {
         const h2 = document.createElement("h2");
         const h3 = document.createElement("h3");
         const h4 = document.createElement("h4");
+        const span = document.createElement("span");
         cartList.classList.add("cartList2");
         h2.innerHTML = `Esa es la ${pizza.nombre}`;
         h3.innerHTML = `Ingredientes: ${pizza.ingrdientes}`;
         h4.innerHTML = `$ ${pizza.precio}`;
+        span.innerHTML = `X`;
         cartList.appendChild(h2);
         cartList.appendChild(h3);
         cartList.appendChild(h4);
+        cartList.appendChild(span);
+        span.classList.add("borrar");
+        span.addEventListener("click", (e) => {
+          const item = e.target.parentElement;
+          cartList.innerHTML = "";
+        });
       } else {
         return;
       }
