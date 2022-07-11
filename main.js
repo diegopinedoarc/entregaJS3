@@ -109,9 +109,6 @@ function createHTML() {
       cartList.appendChild(h2);
       cartList.appendChild(h3);
       cartList.appendChild(h4);
-    } else {
-      showError("No encuentro ese ID!");
-      return;
     }
   });
 }
