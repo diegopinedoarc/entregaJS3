@@ -80,7 +80,6 @@ function buscarPizza(e) {
     showError("Por favor ingresa el ID de la pizza !");
     return;
   }
-
   createHTML();
   inputNum.value = "";
 }
@@ -97,20 +96,27 @@ function showError(error) {
 
 function createHTML() {
   cartList.innerHTML = "";
-  pizzas.forEach((pizza) => {
-    if (pizza.id === inputNum.valueAsNumber) {
-      const h2 = document.createElement("h2");
-      const h3 = document.createElement("h3");
-      const h4 = document.createElement("h4");
-      cartList.classList.add("cartList2");
-      h2.innerHTML = `Esa es la ${pizza.nombre}`;
-      h3.innerHTML = `Ingredientes: ${pizza.ingrdientes}`;
-      h4.innerHTML = `$ ${pizza.precio}`;
-      cartList.appendChild(h2);
-      cartList.appendChild(h3);
-      cartList.appendChild(h4);
-    }
-  });
+  if (pizzas.some((pizza) => pizza.id == inputNum.value)) {
+    pizzas.forEach((pizza) => {
+      if (pizza.id === inputNum.valueAsNumber) {
+        const h2 = document.createElement("h2");
+        const h3 = document.createElement("h3");
+        const h4 = document.createElement("h4");
+        cartList.classList.add("cartList2");
+        h2.innerHTML = `Esa es la ${pizza.nombre}`;
+        h3.innerHTML = `Ingredientes: ${pizza.ingrdientes}`;
+        h4.innerHTML = `$ ${pizza.precio}`;
+        cartList.appendChild(h2);
+        cartList.appendChild(h3);
+        cartList.appendChild(h4);
+      } else {
+        return;
+      }
+    });
+  } else {
+    showError("No hay ninguna pizza listada con ese ID!");
+    return;
+  }
 }
 
 // pizzas.forEach((pizza) => {
@@ -118,4 +124,10 @@ function createHTML() {
 //   div.classList;
 //   div.innerHTML = `<img class="imgCatalogo" src="${pizza.img}" alt="" />`;
 //   catalogo.appendChild(div);
+// });
+
+// pizzas.forEach((ids) => {
+//   if (ids.id !== inputNum.valueAsNumber) {
+//     console.log("xxxxxsjdfhsdfhdsghdfg");
+//   }
 // });
