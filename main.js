@@ -5,6 +5,8 @@ const menu = document.querySelector(".btn__container");
 const item = document.querySelectorAll(".item");
 const cartList = document.querySelector(".cartContainer");
 const catalogo = document.querySelector(".catalogo");
+const header = document.querySelector(".header");
+
 let pizzas = [
   {
     id: 1,
@@ -66,6 +68,17 @@ let pizzas = [
     img: "./imagenes/fugazeta.jpg",
   },
 ];
+let ultimoScrollTop;
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > ultimoScrollTop) {
+    header.style.top = "-110px";
+  } else {
+    header.style.top = "0";
+  }
+
+  ultimoScrollTop = scrollTop;
+});
 
 menu.addEventListener("click", () => {
   item.forEach((i) => i.classList.toggle("show"));

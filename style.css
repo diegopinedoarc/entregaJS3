@@ -193,7 +193,7 @@ body {
     font-size: 1rem;
     border-radius: 0.8rem;
     position: relative;
-    top: -7.5rem;
+    top: -7.1rem;
     left: 7rem;
     cursor: pointer;
   }
@@ -235,6 +235,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    transition: top 0.5s;
+    box-shadow: 2px 2px 2px 1px var(--celeste);
+    z-index: 3;
   }
   .menu {
     display: flex;
@@ -306,6 +311,7 @@ body {
     border-radius: 0.8rem;
     background: var(--celestesoft);
     text-align: center;
+    box-shadow: 2px 2px 2px 1px var(--celeste);
   }
   .inputBtn {
     width: 5rem;
@@ -313,6 +319,7 @@ body {
     border: none;
     border-radius: 0.8rem;
     cursor: pointer;
+    box-shadow: 2px 2px 2px 1px var(--celeste);
   }
   /* Diseño catalogo pizzas */
   .catalogo {
@@ -329,9 +336,10 @@ body {
     align-items: center;
     justify-content: center;
     width: 16rem;
-    height: 18rem;
+    height: 20rem;
     border: solid 1px var(--naranjasoft);
     border-radius: 0.8rem;
+    box-shadow: 1px 1px 1px 1px var(--celeste);
   }
   .numID {
     position: relative;
@@ -381,6 +389,7 @@ body {
     padding: 5px;
     margin-top: 5px;
     cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--celeste);
   }
   .borrar {
     background: var(--celeste);
