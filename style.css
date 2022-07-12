@@ -139,7 +139,7 @@ body {
     gap: 1rem;
     height: 12rem;
     border-radius: 0.8rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     color: aliceblue;
     font-size: 1.4rem;
     width: 18rem;
@@ -159,7 +159,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 16rem;
+    width: 12rem;
     height: 20rem;
     border: solid 1px var(--azul);
     border-radius: 0.8rem;
@@ -181,7 +181,7 @@ body {
     cursor: pointer;
   }
   .imgCatalogo {
-    width: 12rem;
+    width: 8rem;
     border-radius: 0.8rem;
   }
   .footer {
@@ -252,6 +252,24 @@ body {
     padding: 1rem;
     text-align: center;
     gap: 1rem;
+  }
+  .borrarCart {
+    background: var(--celeste);
+    color: var(--azul);
+    width: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    position: relative;
+    top: -18rem;
+    left: 6rem;
+    cursor: pointer;
+  }
+  .cart__btn {
+    width: 14rem;
+    height: 2.5rem;
+    border-radius: 0.8rem;
+    background: var(--azul);
+    color: aliceblue;
   }
 }
 
@@ -362,7 +380,7 @@ body {
     width: 40vw;
     height: 12rem;
     border-radius: 0.8rem;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     color: aliceblue;
     font-size: 1.4rem;
   }
@@ -442,7 +460,7 @@ body {
     justify-content: center;
     width: 30rem;
     height: auto;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 0.8rem;
     color: var(--blanco);
     margin-top: 1rem;
@@ -505,5 +523,16 @@ body {
     padding: 1rem;
     text-align: center;
     gap: 1rem;
+  }
+  .borrarCart {
+    background: var(--celeste);
+    color: var(--azul);
+    width: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    position: relative;
+    top: -18rem;
+    left: 8rem;
+    cursor: pointer;
   }
 }

@@ -1,12 +1,15 @@
 const inputNum = document.querySelector(".inputSearch");
-
 const inputBTN = document.querySelector(".inputBtn");
 const menu = document.querySelector(".btn__container");
 const item = document.querySelectorAll(".item");
 const cartList = document.querySelector(".cartContainer");
 const catalogo = document.querySelector(".catalogo");
 const header = document.querySelector(".header");
-
+const cartCont = document.querySelector(".carrito__Container");
+const btnCompra = document.querySelectorAll(".btnCatalogo");
+const totalItems = document.querySelector("#totalItems");
+const totalProducts = document.querySelector("#totalProducts");
+const borrarItemCart = document.querySelectorAll(".borrarCart");
 let pizzas = [
   {
     id: 1,
@@ -140,15 +143,76 @@ function createHTML() {
   }
 }
 
-// pizzas.forEach((pizza) => {
-//   const div = document.createElement("div");
-//   div.classList;
-//   div.innerHTML = `<img class="imgCatalogo" src="${pizza.img}" alt="" />`;
-//   catalogo.appendChild(div);
-// });
+//-----------------------------Intento carrito compras ----------
+let products = [];
+const setCount = () => {
+  let totalCount = 0;
+  for (let item in products) {
+    totalCount += Number(products[item].count);
+  }
+  totalItems.innerText = totalCount;
+  return totalCount;
+};
 
-// pizzas.forEach((ids) => {
-//   if (ids.id !== inputNum.valueAsNumber) {
-//     console.log("xxxxxsjdfhsdfhdsghdfg");
-//   }
-// });
+const totalPrice = () => {
+  let totalCart = 0;
+  for (let item in products) {
+    totalCart += Number(products[item].precio * products[item].count);
+  }
+  totalProducts.innerText = totalCart;
+  return totalCart;
+};
+
+const handleAddProduct = (e) => {
+  e.preventDefault();
+  if (
+    !e.target.classList.contains("btnCatalogo") ||
+    e.target.classList.contains("disabled")
+  ) {
+    return;
+  }
+  for (let item in products) {
+    if (products[item].nombre === e.target.dataset.name) {
+      products[item].count++;
+      setCount();
+      totalPrice();
+      productList();
+      return;
+    }
+  }
+  const newPizza = {
+    id: e.target.dataset.id,
+    nombre: e.target.dataset.name,
+    precio: e.target.dataset.price,
+    img: e.target.dataset.img,
+    count: e.target.dataset.count,
+  };
+  products.push(newPizza);
+  setCount();
+  totalPrice();
+  productList();
+};
+
+const productList = () => {
+  cartCont.innerHTML = products
+    .map((product) => {
+      return `<div class="cardCatalogo">
+          <img class="imgCatalogo" src="${product.img}" alt="" />
+          <span class="numID">#${product.id}</span>
+          <h2>${product.nombre}</h2>
+          <h4>c/u $${product.precio}</h4>
+          <span class="cart__price">$${product.price * product.count}</span>
+          <span class="borrarCart">X</span>
+
+        </div>`;
+    })
+    .join("");
+};
+
+btnCompra.forEach((item) => {
+  item.addEventListener("click", handleAddProduct);
+});
+
+borrarItemCart.addEventListener("click", () => {
+  borrarItemCart.parentElement.remove();
+});
