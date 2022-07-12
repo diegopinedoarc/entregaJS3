@@ -19,11 +19,14 @@
       <nav id="navBar">
         <ul class="menu">
           <div class="containerItems">
-            <li class="item"><a class="linkNav" href="">Catálogo</a></li>
+            <li class="item">
+              <a class="linkNav" href="#catalogo">Catálogo</a>
+            </li>
             <li class="item"><a class="linkNav" href="">Contacto</a></li>
             <li class="item">
               <a class="linkNav" href=""
                 ><i class="fa-solid fa-cart-shopping"></i
+                ><span id="totalItems"></span
               ></a>
             </li>
           </div>
@@ -58,7 +61,7 @@
       <section class="carro">
         <div class="cartContainer"></div>
       </section>
-      <section class="catalogo">
+      <section class="catalogo" id="catalogo">
         <div class="cardCatalogo">
           <img class="imgCatalogo" src="./imagenes/napolitana.jpg" alt="" />
           <span class="numID">#1</span>
@@ -102,8 +105,32 @@
           <a href="#"><button class="btnCatalogo">Agregar</button></a>
         </div>
       </section>
+      <section class="carrito" id="carrito">
+        <h2>Tu pedido:</h2>
+        <div class="carrito__Container">No agregaste nada al pedido</div>
+        <div class="total__items">
+          <div class="total__price">
+            <p class="total">Total:</p>
+            $
+            <span id="totalProducts"></span>
+          </div>
+          <button class="cart__btn">Finalizar Compra</button>
+        </div>
+      </section>
+      <section class="contacto">
+        <h2>Comunicate con nosotros!</h2>
+        <input type="text" placeholder="Ingresa tu nombre" />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="Ingresa tu email"
+        />
+        <h2>o llamanos al 0800-888-Pizza</h2>
+      </section>
+      <footer class="footer"><p>Realizado por Diego Pinedo</p></footer>
     </main>
-    <footer class="footer"><p>Realizado por Diego Pinedo</p></footer>
+
     <script src="main.js"></script>
   </body>
 </html>
