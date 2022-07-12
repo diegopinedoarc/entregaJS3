@@ -31,14 +31,12 @@ body {
   .header {
     background: var(--azul);
     color: var(--blanco);
-    width: 100%;
+    width: auto;
     height: 10rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 2px 2px 2px 1px black;
-    position: fixed;
-    top: 0;
     transition: top 0.5s;
   }
   .menu {
@@ -112,7 +110,7 @@ body {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    margin-top: 11rem;
+    margin-top: 6rem;
   }
   .imgHero {
     width: 18rem;
