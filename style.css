@@ -265,7 +265,7 @@ body {
     cursor: pointer;
   }
   .cart__btn {
-    width: 14rem;
+    width: 10rem;
     height: 2.5rem;
     border-radius: 0.8rem;
     background: var(--azul);
