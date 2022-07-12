@@ -37,6 +37,9 @@ body {
     justify-content: space-around;
     align-items: center;
     box-shadow: 2px 2px 2px 1px black;
+    position: fixed;
+    top: 0;
+    transition: top 0.5s;
   }
   .menu {
     display: flex;
@@ -109,7 +112,7 @@ body {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 11rem;
   }
   .imgHero {
     width: 18rem;
